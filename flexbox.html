@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout</title>
+
+    <style>
+        
+        body {
+
+            font-family: 'Times New Roman', Times, serif;
+            background-color: rgb(104, 104, 156);
+            margin: 0px;
+        }
+
+        .header {
+            text-align: center;
+            background-color: rgb(107, 107, 163);
+            padding: 20px;
+            color: white;
+            text-shadow: 2px 3px 7px black;
+            font-size: 32px;
+            border: 5px solid black;
+            
+        }
+
+        .main {
+            border: 5px solid black;
+            margin-top: 10px;
+            display: flex;
+            flex-wrap: wrap;
+
+        }
+
+        .one {
+
+            border: 5px solid black;
+            /* width: 20%; */
+            flex: 1;
+            padding: 7px;
+            color: white;
+            margin: 5px;
+            height: 300px;
+        }
+
+        .two {
+            /* width: 55%; */
+            flex: 2;
+            padding: 7px;
+            color: white;
+            margin: 5px;
+            border: 5px solid black;
+
+        }
+
+        .three {
+
+            border: 5px solid black;
+            flex: 1;
+            /* width: 20%; */
+            padding: 7px;
+            color: white;
+            margin: 5px;
+        }
+
+        @media screen and (max-width:600px) {
+
+            .main {
+                flex-direction: column;
+            }
+        }
+
+
+    </style>
+
+
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>Header</h1>
+    </div>
+
+    <div class="main">
+
+        <div class="one">
+            <h2>Article</h2>
+        </div>
+        <div class="two">
+            <h2>Main Content</h2>
+        </div>
+        <div class="three">
+            <h2>Article</h2>
+        </div>
+
+    </div>
+
+    <div style="margin-top: 10px; text-align: center; color: white; border: 5px solid black; padding: 20px;">
+        <p>
+            © Hassan Raza | All Right Reserved
+        </p>
+    </div>
+
+    <!-- <H1>flexboxfroggy.com</H1> -->
+
+</body>
+
+</html>

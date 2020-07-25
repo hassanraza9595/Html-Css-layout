@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout</title>
+    <style>
+        /* 
+.one {
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    display: inline-block;
+    margin: 10px 5px;
+
+}
+
+.two {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    display: inline-block;
+    margin: 10px 5px;
+    
+}
+
+.three {
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    margin: 10px 5px;
+    position: relative;
+    bottom: 100px;
+    left: 25px;
+}
+
+.four {
+    width: 50px;
+    height: 50px;
+    background-color: green;
+    margin: 10px 5px;
+    position: relative;
+    bottom: 160px;
+    left: 140px;
+}
+   */
+
+   body {
+       margin: 0px;
+       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+       padding: 8px;
+       background-color: skyblue;
+   }
+
+   *{
+       box-sizing: border-box;
+   }
+
+   .header {
+       width: 100%;
+       border: 2px outset gray;
+       text-align: center;
+       color: white;
+       text-shadow: 2px 0px 5px black;
+       /* position: fixed;
+       top: 0px;
+       z-index: -1; */
+   }
+
+   .main {
+       margin-top: 10px;
+       overflow: auto;
+       
+   }
+
+   .article {
+       width: 40%;
+       height: 300px;
+       float: left;
+       padding: 10px;
+       border: 2px solid gray;   
+       margin: 2px;
+       color: white;
+       
+   }
+
+   .content {
+       width: 59%;
+       height: 300px;
+       float: left;
+       padding: 10px;
+       border: 2px solid gray;
+       margin: 2px;
+       color: white;
+   }
+
+   .foot {
+       margin-top: 10px;
+       text-align: center;
+       border: 2px solid gray;
+       color: white;
+   }
+
+   @media screen and (max-width: 600px) {
+
+       .article , .content {
+           width: 100%;
+           margin-top: 5px;
+       } 
+       
+   }
+
+
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+
+        <h1>Header</h1>
+
+    </div>
+
+    <div class="main">
+
+        <div class="article">
+
+            <h2>Article</h2>
+
+        </div>
+
+        <div class="content">
+
+            <h1>Content</h1>
+
+        </div>
+
+    </div>
+
+    <div class="foot">
+
+        <h2>Footer</h2>
+
+    </div>
+    
+
+</body>
+
+</html>
