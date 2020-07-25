@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+  box-sizing: border-box;
+}
+.menu {
+  width: 20%;
+  float: left;
+}
+.menu a {
+  background-color: gray;
+  display: block;
+  color: white;
+  padding: 10px;
+  margin-top: 8px;
+  width: 100%;
+}
+
+.main {
+  width: 60%;
+  float: left;
+  padding: 8px;
+  margin-top: 8px;
+  background-color: gray;
+  margin-left: 3px;
+  color: white;
+}
+
+.right {
+  width: 19%;
+  float: left;
+  background-color: gray;
+  margin-top: 8px;
+  margin-left: 2px;
+  color: white;
+  padding: 8px;
+}
+
+@media screen and (max-width:800px) {
+
+.menu, .main, .right {
+  width: 100%;
+  
+}
+
+}
+
+@media screen and (max-width:500px) {
+
+  .menu, .main, .right {
+    width: 100%;
+
+  }
+  
+}
+
+</style>
+</head>
+<body style="font-family:Verdana;color:#aaaaaa;">
+
+<div style="background-color:gray;padding:15px;text-align:center; color: white;">
+  <h1>Hello World</h1>
+</div>
+
+<div style="overflow:auto">
+  <div class="menu">
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+    <a href="#">Link 3</a>
+    <a href="#">Link 4</a>
+  </div>
+
+  <div class="main">
+    <h2>Lorum Ipsum</h2>
+    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+  </div>
+
+  <div class="right">
+    <h2>About</h2>
+    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+  </div>
+</div>
+
+<div style="background-color: gray;text-align:center;padding:10px;margin-top:7px; color: white;">© copyright Hassan Raza</div>
+
+</body>
+</html>
