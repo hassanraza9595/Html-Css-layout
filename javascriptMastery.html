@@ -218,34 +218,62 @@
 // an array can be unpacked in such a way that its values are extracted into distinct variables, like this:                            
 
 
-const names = ['Ali','Hassan','Yousif','Kamran','Yasir','Iftikhar','Atif']; //  skip values under consideration of the order.
+// const names = ['Ali','Hassan','Yousif','Kamran','Yasir','Iftikhar','Atif']; //  skip values under consideration of the order.
 
-const [name,,name2,,,name3,name4] = names; // 0 index value assign to name, 1 to name2, so on.
+// const [name,,name2,,,name3,name4] = names; // 0 index value assign to name, 1 to name2, so on.
 
-console.log(name);
-console.log(name2);
-console.log(name3);
-console.log(name4)
+// console.log(name);
+// console.log(name2);
+// console.log(name3);
+// console.log(name4);
 
 // You can also assign multiple values at once with the rest pattern.
 
-const numbers = [1,2,3,4,5,6];
+// const numbers = [1,2,3,4,5,6];
 
-const [num, num2, ...num3] = numbers
+// const [num, num2, ...num3] = numbers
 
-console.log(num);
-console.log(num2);
-console.log(num3);
+// console.log(num);
+// console.log(num2);
+// console.log(num3);
 
 // Array destructuring allows for default values. Of course, you can combine this pattern with function calls, too.
 
 
-    const addFun = () => [10,20,40];
+    // const addFun = () => [10,20,30,40,50];
 
-    const [n1,n2, n3 = 60] = addFun();
-    console.log(n1);
-    console.log(n2);
-    console.log(n3);
+    // const [n1, n2, n3 = 60] = addFun();
+    // console.log(n1);
+    // console.log(n2);
+    // console.log(n3) 
+
+// Array destructuring allows the function caller to use semantic variable names.
+
+const getFood = type => {
+    let food = [];
+    let error = false;
+    if(type==='fruit'){
+        food = ['Apple', 'Banana', 'Strawberry'];
+    }
+    else if(type === 'junk') {
+
+        food = ['pizza', 'burger', 'chicken tika'];
+    }
+
+    else {
+        error = true;
+    }
+
+    const addFood = newFood => food.push(newFood);
+    return [food, error, addFood]; // food is array, error is variable, addFood is function
+
+};
+
+const [healtyFood, noFruitsAvailable, addFruitFunc] = getFood('fruit');
+console.log(healtyFood); // healtyFood is function 
+console.log(noFruitsAvailable); // noFruitsAvailable is a variable
+console.log(addFruitFunc('Mango')); // addFruitFunc is a function
+console.log(healtyFood);
 
 
 
