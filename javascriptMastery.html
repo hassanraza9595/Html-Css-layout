@@ -367,33 +367,129 @@
 
         // With this succinct(short) syntax, you can conveniently create a copy of an array.
 
-        const food = ["🥞", "🧇", "🍔", "🍟", "🍕"];
-        const copy = [...food];
-     //    const copy = food;
-        console.log(typeof copy); // ["🥞", "🧇", "🍔", "🍟", "🍕"]
-        console.log(typeof food);
-        console.log(food === copy); // false
+        // const food = ["🥞", "🧇", "🍔", "🍟", "🍕"];
+        // const copy = [...food];
+        //  const copy = food;
+        // console.log(typeof copy); // ["🥞", "🧇", "🍔", "🍟", "🍕"]
+        // console.log(typeof food);
+        // console.log(food === copy); // false
 
 
-/* Recalling the last paragraph of our subsection on the switch statement, 
-the spread syntax is frequently used in the context of React state.
-With React, you should not manipulate state objects directly.
-Instead, you need to create a brand-new state object whenever you want to update the state.
-The following concept is considered good practice. */
+        /* Recalling the last paragraph of our subsection on the switch statement,
+        the spread syntax is frequently used in the context of React state.
+        With React, you should not manipulate state objects directly.
+        Instead, you need to create a brand-new state object whenever you want to update the state.
+        The following concept is considered good practice. */
 
 
-const family = {
-    members: 9,
-    membersName: ['Ali', 'Hassan', 'etc'],
-}
+        // const family = {
+        //     members: 9,
+        //     membersName: ['Ali', 'Hassan', 'etc'],
+        // }
 
-const belongsTo = {
-    gaji: [...family.membersName],
-    Total: family.members,
-}
+        // const belongsTo = {
+        //     gaji: [...family.membersName],
+        //     Total: family.members,
+        // }
 
-console.log(belongsTo.gaji)
-console.log(belongsTo.Total);
+        // console.log(belongsTo.gaji)
+        // console.log(belongsTo.Total);
+
+        // **********************************************************************************************************
+
+        // Rest operator
+
+        // With the help of the rest operator (...), you can merge a list of function arguments into an array.    
+
+        // Its purpose is to merge a list of values into an array.
+
+        //  const family = (...names) => names ;
+
+        //  var check = family('ali', 'raza', 'fiza');
+        //  console.log(check);          
+
+        /* It is a common practice to use the rest operator in combination with the spread operator.
+         This combines multiple arguments into an array to distribute the entries again in
+         another place inside of a React component. */
+
+        // function renderProduct(
+        //     // these are considered as component-specific
+        //     { id, name },
+        //     /* all other arguments are relevant for container component. Therefore, consolidate them into an array with rest operator */
+        //     ...containerProps) {
+        //     // output 0815, choco, [{margin: "10px"}, {padding: "5px"}]
+        //     console.log(id, name, containerProps);
+        //     console.log(typeof id); // string 
+        //     console.log(typeof name); //string
+        //     console.log(typeof containerProps); // object
+        //     /* unpack array again with spread operator to provide them as individual args */
+        //     renderContainer(...containerProps);
+
+
+        // }
+        // function renderContainer(margin, padding) {
+        //     // output {margin: "10px"}, {padding: "5px"}
+        //     console.log('Render Container')
+        //     console.log(typeof margin);
+        //     console.log(typeof padding)
+        //     console.log(margin, padding);
+        // }
+        // const product = {
+        //     id: "0815", name: "choco"
+        // }
+        // renderProduct(product, { margin: "10px" }, { padding: "5px" });
+
+// ************************************************************************************************************
+
+                          // Classes
+
+/*
+
+A class represents a blueprint for new objects.
+Variables and functions can be attached to a class and are called properties and methods, respectively.
+In the context of a class, the this keyword refers to the current instance.
+If you are coming from an object-oriented background,
+you most likely have some incorrect assumptions about it; this article helps to demystify the this keyword.
+
+A class can have a constructor method, which represents a special kind of function
+to initialize new objects of the blueprint.
+You can instantiate the class with the new keyword.
+With this, the constructor is invoked (or the default constructor,
+if you do not provide any), and a new object is created.
+
+  */
+
+//   class Leader {
+//       // class body
+//       constructor() {
+//           // property
+//           this.popular = "Zia Khan";
+//           console.log('Constructor called once the object created');
+//       }
+
+//       whatsPopular() {
+//           // method body
+//           console.log(this.popular);
+//       }
+//   };
+
+//   const teacher = new Leader(); 
+//   teacher.whatsPopular();
+
+// ***************************************************************************************************
+
+//                      Array functions
+
+
+/* The map() function produces a new array with the same number of elements.
+ However, for every entry of the original entry, an operation was applied to produce new entries.
+ The following example creates a new array with duplicated fruits for every entry. */
+
+ const numbers = [1,2,3,4,5];
+
+ const copyNumbers = numbers.map(f=>`${f}${f}`);
+ console.log(numbers);
+ console.log(typeof copyNumbers[0]);
 
 
 
