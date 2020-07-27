@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavascriptMastery</title>
+</head>
+
+<body>
+    <script>
+
+        // *************************************************************************************************    
+
+        // Conditional logic with if statements, the ternary operator, and logical operators
+
+        // const name = "Hassan";
+
+        //  const student = name === "Hassan" ? 'Belong TO IT' : 'None'; // if condition tru return 'Belong to IT' and assign student otherwise return else.
+
+        //  console.log(student);
+
+
+
+        //  if(name === "Hassan") {
+        //      const student = name;
+        //      console.log(student);
+        //  }
+        //  else {
+        //      const student = 'None';
+        //      console.log(student);
+        //  }
+
+        // **************************************************************************************************
+
+        // logical Operator  And && or ||
+
+        // const play = true;
+
+        // cricket = team => team ;
+
+        // const Team = play && cricket(46);
+
+        // console.log(Team);
+
+        // It is also possible to combine multiple conditions.
+
+        // const student = true;
+        // const name = 'Hassan';
+
+        // const studentID = student && name?.length  > 5 && name;
+        // console.log(studentID);
+
+        // *************************************************************************************************
+
+        // Object literals and inline functions
+
+        // const student = { name: 'hassan', rollNo: 46, batch: '2K18'};
+
+
+        // 2nd function argument uses inline object literal
+        // student("name", { batch: "2K18" })
+
+        // With ES2015 syntax, you can also use shorthand properties and method names.
+
+
+        // instead of 
+        // function student(id) {
+        //     return {
+        //         name: 'hassan',
+        //         id : id,
+        //         study: function() {
+        //             console.log('PIAIC');
+        //         }
+        //     }
+        // }
+
+        // console.log(student(46));
+
+        // var getFun = student(46)
+
+        // getFun.study();
+
+        // You can
+
+        // function foo(name,id) {
+        //   return {
+        //     name,
+        //     id, // shorthand property name
+        //     bar() { // shorthand method name
+        //       console.log("bar");
+        //     }
+        //   }
+        // }
+
+        // var getFun2 = foo('hassan',46);
+        // console.log(getFun2);
+
+
+        // ****************************************************************************************************
+
+        // Template literals or stings
+
+        // const name = 'hassan';
+        // const insititute = prompt('Enter Insititute: ');
+
+        // console.log(`This is ${name}, Student of ${insititute}`);
+
+        // console.log(Math.floor(Math.random() * Math.floor(5)));
+
+       // Expressions can, of course, be more complex, like inline calculations or function calls.
+
+//         const name = "doppelmutzi";
+//         const getRandomIndex = max => Math.floor(Math.random() * Math.floor(max))
+//         const food = ["🥞", "🧇", "🍔", "🍟", "🍕"];
+//         const getFood = index => food[index]
+//         console.log(`Hello, my name is ${name} 
+// and I'm hungry for ${getFood(getRandomIndex(food.length))}`);
+
+        // console.log(Math.random()*5)
+
+// ************************************************************************************************************
+
+                              //  Object Destructuring
+
+                              //  extract properties into variables.
+        
+        const students = {
+            stud: ['hassan', 46, '2K18', 'IT'],
+            stud2:  ['hassan raza', 36, '2K18', 'IT'],
+                }
+
+        // const {stud, stud2} = students; // Good Approach to follow
+        
+        // console.log(stud);
+        // console.log(stud2);
+
+// If you use assignment without variable declaration, you need to use parentheses.
+
+        // let stud, stud2; // ['hassan', 46, '2K18', 'IT']
+        // ({stud, stud2} = students); //  ['hassan raza', 36, '2K18', 'IT']
+          
+        // console.log(stud);
+        // console.log(stud2); 
+
+// Object destructuring offers you syntactical sugar to save extra lines of code.
+
+// const stud = students.stud;
+// const stud2 = students.stud2;
+
+// console.log(stud);
+// console.log(stud2); 
+
+ //  In the context of React, object destructuring is frequently used with function parameters. (IMP)
+
+//  const student = {name:'hassan', hobby:'React'};
+
+//  function show({hobby, name}) {
+//      console.log(name, hobby)
+//  }
+//  show(student);
+
+//  printName = ({name}) => {
+//      console.log(name);
+//  }
+
+ 
+//  printName(student);
+
+
+ // Assigning in combination with renaming variables might be useful to increase the readability of your code.
+
+//  const course = {
+//      subjects: ['java', 'python', 'react', 'html', 'css']
+//  }
+
+//  const {subjects : latest} = course;
+//  console.log(latest)
+
+
+// You can also define default values while unpacking fields from the assigned object.
+// The following example combines multiple techniques.
+
+
+// const {
+//     numbers : odd = [1,3], 
+//     numbers2:even = [2,4] } 
+
+//     = {
+//         numbers: [1,2,3,4],
+//         numbers2:[5,6,7,8]
+//     };
+
+//     console.log(odd);
+//     console.log(even);
+
+
+// Nesting is also possible, but I wouldn’t recommend overdoing it; otherwise, understandability decreases.
+
+// const creatures = {
+//   animals: {
+//     wildlife: ["🦂", "🐍"],
+//     pet: ["🐕", "🐈"]
+  
+// },
+//   human: ["👨🏿‍💼", "👩🏼‍💼", "🧑🏻‍💼"]
+// };
+// const { human, animals:{wildlife,pet} } = creatures;
+// console.log(wildlife); //  ["🐕", "🐈"]
+// console.log(pet);
+// console.log(human);
+
+//***********************************************************************************************************
+
+                            // Array Destructuring 
+
+// With the help of the destructuring assignment, 
+// an array can be unpacked in such a way that its values are extracted into distinct variables, like this:                            
+
+
+const names = ['Ali','Hassan','Yousif','Kamran','Yasir','Iftikhar','Atif']; //  skip values under consideration of the order.
+
+const [name,,name2,,,name3,name4] = names; // 0 index value assign to name, 1 to name2, so on.
+
+console.log(name);
+console.log(name2);
+console.log(name3);
+console.log(name4)
+
+// You can also assign multiple values at once with the rest pattern.
+
+const numbers = [1,2,3,4,5,6];
+
+const [num, num2, ...num3] = numbers
+
+console.log(num);
+console.log(num2);
+console.log(num3);
+
+// Array destructuring allows for default values. Of course, you can combine this pattern with function calls, too.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+body { 
+    margin: 0;
+    margin-top: 5px;
+    background-color: gray;
+}
+
+#wrapper {
+    max-width: 100%;;
+    display: grid;
+    /* flex-direction: row; */
+    grid-template-columns: 2fr 2fr;
+}
+
+.box {
+
+    width: 100px;
+    height: 70px;
+    background-color: black;
+    margin-left: 5px;
+    margin-top: 10px;
+    box-shadow: 5px 5px 5px white;
+    
+}
