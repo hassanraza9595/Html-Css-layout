@@ -249,6 +249,44 @@
 
 // Array destructuring allows the function caller to use semantic variable names.
 
+// const getFood = type => {
+//     let food = [];
+//     let error = false;
+//     if(type==='fruit'){
+//         food = ['Apple', 'Banana', 'Strawberry'];
+//     }
+//     else if(type === 'junk') {
+
+//         food = ['pizza', 'burger', 'chicken tika'];
+//     }
+
+//     else {
+//         error = true;
+//     }
+
+//     const addFood = newFood => food.push(newFood);
+//     return [food, error, addFood]; // food is array, error is variable, addFood is function
+
+// };
+
+// const [healtyFood, noFruitsAvailable, addFruitFunc] = getFood('fruit');
+// console.log(healtyFood); // healtyFood is function 
+// console.log(noFruitsAvailable); // noFruitsAvailable is a variable
+// console.log(addFruitFunc('Mango')); // addFruitFunc is a function
+// console.log(healtyFood);
+
+
+
+
+/*
+For this use case, in my opinion, returning an array with the getFood function leads
+ to more concise code than with object destructuring.
+ Array destructuring allows for custom variable names.
+ In contrast, with object destructuring, you need to rename the variables.
+*/
+
+
+
 const getFood = type => {
     let food = [];
     let error = false;
@@ -265,26 +303,16 @@ const getFood = type => {
     }
 
     const addFood = newFood => food.push(newFood);
-    return [food, error, addFood]; // food is array, error is variable, addFood is function
+    return {food, error, addFood}; // food is array, error is variable, addFood is function
 
 };
 
-const [healtyFood, noFruitsAvailable, addFruitFunc] = getFood('fruit');
-console.log(healtyFood); // healtyFood is function 
-console.log(noFruitsAvailable); // noFruitsAvailable is a variable
-console.log(addFruitFunc('Mango')); // addFruitFunc is a function
-console.log(healtyFood);
 
+   const {food: healtyFood, error: noFruitsAvailable, addFood: addFruitFunc} = getFood('fruit');
 
-
-
-
-
-
-
-
-
-
+   console.log(noFruitsAvailable);
+   console.log(addFruitFunc('Grapes'));
+   console.log(healtyFood);
 
 
 
