@@ -485,12 +485,53 @@ if you do not provide any), and a new object is created.
  However, for every entry of the original entry, an operation was applied to produce new entries.
  The following example creates a new array with duplicated fruits for every entry. */
 
- const numbers = [1,2,3,4,5];
+//  const numbers = [1,2,3,4,5];
 
- const copyNumbers = numbers.map(f=>`${f}${f}`);
- console.log(numbers);
- console.log(typeof copyNumbers[0]);
+//  const copyNumbers = numbers.map(f=>`${f}${f}`);
+//  console.log(numbers);
+//  console.log(typeof copyNumbers[0]);
 
+// ****************************************************************************************************
+
+                                    // Callback functions
+
+// A function passed as an argument to another function is 
+// called a callback if the function invokes the argument at a later time.    
+
+// window.setTimeout(() => console.log("I'm a callback function"), 1000);
+
+function printGreet(msg, alertGreet) {
+    if(msg === 'Morning') {
+     morning(alertGreet);
+}
+else if (msg === 'Evening') {
+    evening(alertGreet);
+}
+else {
+    night(alertGreet);
+}
+};
+
+function morning() {
+    alert('Good Morning');
+    alertGreet('Dear');
+}
+
+function evening() {
+    alert('Good Evening');
+    alertGreet('Bye');
+}
+
+function night() {
+    alert('Good Night');
+    alertGreet('Take Care');
+}
+
+function alertGreet(msg) {
+    alert(msg);
+}
+
+printGreet('Evening', alertGreet);
 
 
     </script>
