@@ -240,7 +240,12 @@ console.log(num3);
 // Array destructuring allows for default values. Of course, you can combine this pattern with function calls, too.
 
 
+    const addFun = () => [10,20,40];
 
+    const [n1,n2, n3 = 60] = addFun();
+    console.log(n1);
+    console.log(n2);
+    console.log(n3);
 
 
 
