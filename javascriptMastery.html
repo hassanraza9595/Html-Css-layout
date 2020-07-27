@@ -108,215 +108,292 @@
 
         // console.log(Math.floor(Math.random() * Math.floor(5)));
 
-       // Expressions can, of course, be more complex, like inline calculations or function calls.
+        // Expressions can, of course, be more complex, like inline calculations or function calls.
 
-//         const name = "doppelmutzi";
-//         const getRandomIndex = max => Math.floor(Math.random() * Math.floor(max))
-//         const food = ["🥞", "🧇", "🍔", "🍟", "🍕"];
-//         const getFood = index => food[index]
-//         console.log(`Hello, my name is ${name} 
-// and I'm hungry for ${getFood(getRandomIndex(food.length))}`);
+        //         const name = "doppelmutzi";
+        //         const getRandomIndex = max => Math.floor(Math.random() * Math.floor(max))
+        //         const food = ["🥞", "🧇", "🍔", "🍟", "🍕"];
+        //         const getFood = index => food[index]
+        //         console.log(`Hello, my name is ${name} 
+        // and I'm hungry for ${getFood(getRandomIndex(food.length))}`);
 
         // console.log(Math.random()*5)
 
-// ************************************************************************************************************
+        // ************************************************************************************************************
 
-                              //  Object Destructuring
+        //  Object Destructuring
 
-                              //  extract properties into variables.
-        
-        const students = {
-            stud: ['hassan', 46, '2K18', 'IT'],
-            stud2:  ['hassan raza', 36, '2K18', 'IT'],
-                }
+        //  extract properties into variables.
+
+        // const students = {
+        //     stud: ['hassan', 46, '2K18', 'IT'],
+        //     stud2:  ['hassan raza', 36, '2K18', 'IT'],
+        //         }
 
         // const {stud, stud2} = students; // Good Approach to follow
-        
+
         // console.log(stud);
         // console.log(stud2);
 
-// If you use assignment without variable declaration, you need to use parentheses.
+        // If you use assignment without variable declaration, you need to use parentheses.
 
         // let stud, stud2; // ['hassan', 46, '2K18', 'IT']
         // ({stud, stud2} = students); //  ['hassan raza', 36, '2K18', 'IT']
-          
+
         // console.log(stud);
         // console.log(stud2); 
 
-// Object destructuring offers you syntactical sugar to save extra lines of code.
+        // Object destructuring offers you syntactical sugar to save extra lines of code.
 
-// const stud = students.stud;
-// const stud2 = students.stud2;
+        // const stud = students.stud;
+        // const stud2 = students.stud2;
 
-// console.log(stud);
-// console.log(stud2); 
+        // console.log(stud);
+        // console.log(stud2); 
 
- //  In the context of React, object destructuring is frequently used with function parameters. (IMP)
+        //  In the context of React, object destructuring is frequently used with function parameters. (IMP)
 
-//  const student = {name:'hassan', hobby:'React'};
+        //  const student = {name:'hassan', hobby:'React'};
 
-//  function show({hobby, name}) {
-//      console.log(name, hobby)
-//  }
-//  show(student);
+        //  function show({hobby, name}) {
+        //      console.log(name, hobby)
+        //  }
+        //  show(student);
 
-//  printName = ({name}) => {
-//      console.log(name);
-//  }
-
- 
-//  printName(student);
+        //  printName = ({name}) => {
+        //      console.log(name);
+        //  }
 
 
- // Assigning in combination with renaming variables might be useful to increase the readability of your code.
-
-//  const course = {
-//      subjects: ['java', 'python', 'react', 'html', 'css']
-//  }
-
-//  const {subjects : latest} = course;
-//  console.log(latest)
+        //  printName(student);
 
 
-// You can also define default values while unpacking fields from the assigned object.
-// The following example combines multiple techniques.
+        // Assigning in combination with renaming variables might be useful to increase the readability of your code.
+
+        //  const course = {
+        //      subjects: ['java', 'python', 'react', 'html', 'css']
+        //  }
+
+        //  const {subjects : latest} = course;
+        //  console.log(latest)
 
 
-// const {
-//     numbers : odd = [1,3], 
-//     numbers2:even = [2,4] } 
-
-//     = {
-//         numbers: [1,2,3,4],
-//         numbers2:[5,6,7,8]
-//     };
-
-//     console.log(odd);
-//     console.log(even);
+        // You can also define default values while unpacking fields from the assigned object.
+        // The following example combines multiple techniques.
 
 
-// Nesting is also possible, but I wouldn’t recommend overdoing it; otherwise, understandability decreases.
+        // const {
+        //     numbers : odd = [1,3], 
+        //     numbers2:even = [2,4] } 
 
-// const creatures = {
-//   animals: {
-//     wildlife: ["🦂", "🐍"],
-//     pet: ["🐕", "🐈"]
-  
-// },
-//   human: ["👨🏿‍💼", "👩🏼‍💼", "🧑🏻‍💼"]
-// };
-// const { human, animals:{wildlife,pet} } = creatures;
-// console.log(wildlife); //  ["🐕", "🐈"]
-// console.log(pet);
-// console.log(human);
+        //     = {
+        //         numbers: [1,2,3,4],
+        //         numbers2:[5,6,7,8]
+        //     };
 
-//***********************************************************************************************************
-
-                            // Array Destructuring 
-
-// With the help of the destructuring assignment, 
-// an array can be unpacked in such a way that its values are extracted into distinct variables, like this:                            
+        //     console.log(odd);
+        //     console.log(even);
 
 
-// const names = ['Ali','Hassan','Yousif','Kamran','Yasir','Iftikhar','Atif']; //  skip values under consideration of the order.
+        // Nesting is also possible, but I wouldn’t recommend overdoing it; otherwise, understandability decreases.
 
-// const [name,,name2,,,name3,name4] = names; // 0 index value assign to name, 1 to name2, so on.
+        // const creatures = {
+        //   animals: {
+        //     wildlife: ["🦂", "🐍"],
+        //     pet: ["🐕", "🐈"]
 
-// console.log(name);
-// console.log(name2);
-// console.log(name3);
-// console.log(name4);
+        // },
+        //   human: ["👨🏿‍💼", "👩🏼‍💼", "🧑🏻‍💼"]
+        // };
+        // const { human, animals:{wildlife,pet} } = creatures;
+        // console.log(wildlife); //  ["🐕", "🐈"]
+        // console.log(pet);
+        // console.log(human);
 
-// You can also assign multiple values at once with the rest pattern.
+        //***********************************************************************************************************
 
-// const numbers = [1,2,3,4,5,6];
+        // Array Destructuring 
 
-// const [num, num2, ...num3] = numbers
-
-// console.log(num);
-// console.log(num2);
-// console.log(num3);
-
-// Array destructuring allows for default values. Of course, you can combine this pattern with function calls, too.
-
-
-    // const addFun = () => [10,20,30,40,50];
-
-    // const [n1, n2, n3 = 60] = addFun();
-    // console.log(n1);
-    // console.log(n2);
-    // console.log(n3) 
-
-// Array destructuring allows the function caller to use semantic variable names.
-
-// const getFood = type => {
-//     let food = [];
-//     let error = false;
-//     if(type==='fruit'){
-//         food = ['Apple', 'Banana', 'Strawberry'];
-//     }
-//     else if(type === 'junk') {
-
-//         food = ['pizza', 'burger', 'chicken tika'];
-//     }
-
-//     else {
-//         error = true;
-//     }
-
-//     const addFood = newFood => food.push(newFood);
-//     return [food, error, addFood]; // food is array, error is variable, addFood is function
-
-// };
-
-// const [healtyFood, noFruitsAvailable, addFruitFunc] = getFood('fruit');
-// console.log(healtyFood); // healtyFood is function 
-// console.log(noFruitsAvailable); // noFruitsAvailable is a variable
-// console.log(addFruitFunc('Mango')); // addFruitFunc is a function
-// console.log(healtyFood);
+        // With the help of the destructuring assignment, 
+        // an array can be unpacked in such a way that its values are extracted into distinct variables, like this:                            
 
 
+        // const names = ['Ali','Hassan','Yousif','Kamran','Yasir','Iftikhar','Atif']; //  skip values under consideration of the order.
+
+        // const [name,,name2,,,name3,name4] = names; // 0 index value assign to name, 1 to name2, so on.
+
+        // console.log(name);
+        // console.log(name2);
+        // console.log(name3);
+        // console.log(name4);
+
+        // You can also assign multiple values at once with the rest pattern.
+
+        // const numbers = [1,2,3,4,5,6];
+
+        // const [num, num2, ...num3] = numbers
+
+        // console.log(num);
+        // console.log(num2);
+        // console.log(num3);
+
+        // Array destructuring allows for default values. Of course, you can combine this pattern with function calls, too.
 
 
-/*
-For this use case, in my opinion, returning an array with the getFood function leads
- to more concise code than with object destructuring.
- Array destructuring allows for custom variable names.
- In contrast, with object destructuring, you need to rename the variables.
-*/
+        // const addFun = () => [10,20,30,40,50];
 
+        // const [n1, n2, n3 = 60] = addFun();
+        // console.log(n1);
+        // console.log(n2);
+        // console.log(n3) 
 
+        // Array destructuring allows the function caller to use semantic variable names.
 
-const getFood = type => {
-    let food = [];
-    let error = false;
-    if(type==='fruit'){
-        food = ['Apple', 'Banana', 'Strawberry'];
-    }
-    else if(type === 'junk') {
+        // const getFood = type => {
+        //     let food = [];
+        //     let error = false;
+        //     if(type==='fruit'){
+        //         food = ['Apple', 'Banana', 'Strawberry'];
+        //     }
+        //     else if(type === 'junk') {
 
-        food = ['pizza', 'burger', 'chicken tika'];
-    }
+        //         food = ['pizza', 'burger', 'chicken tika'];
+        //     }
 
-    else {
-        error = true;
-    }
+        //     else {
+        //         error = true;
+        //     }
 
-    const addFood = newFood => food.push(newFood);
-    return {food, error, addFood}; // food is array, error is variable, addFood is function
+        //     const addFood = newFood => food.push(newFood);
+        //     return [food, error, addFood]; // food is array, error is variable, addFood is function
 
-};
+        // };
 
-
-   const {food: healtyFood, error: noFruitsAvailable, addFood: addFruitFunc} = getFood('fruit');
-
-   console.log(noFruitsAvailable);
-   console.log(addFruitFunc('Grapes'));
-   console.log(healtyFood);
+        // const [healtyFood, noFruitsAvailable, addFruitFunc] = getFood('fruit');
+        // console.log(healtyFood); // healtyFood is function 
+        // console.log(noFruitsAvailable); // noFruitsAvailable is a variable
+        // console.log(addFruitFunc('Mango')); // addFruitFunc is a function
+        // console.log(healtyFood);
 
 
 
 
+        /*
+        For this use case, in my opinion, returning an array with the getFood function leads
+         to more concise code than with object destructuring.
+         Array destructuring allows for custom variable names.
+         In contrast, with object destructuring, you need to rename the variables.
+        */
+
+
+
+        // const getFood = type => {
+        //     let food = [];
+        //     let error = false;
+        //     if(type==='fruit'){
+        //         food = ['Apple', 'Banana', 'Strawberry'];
+        //     }
+        //     else if(type === 'junk') {
+
+        //         food = ['pizza', 'burger', 'chicken tika'];
+        //     }
+
+        //     else {
+        //         error = true;
+        //     }
+
+        //     const addFood = newFood => food.push(newFood);
+        //     return {food, error, addFood}; // food is array, error is variable, addFood is function
+
+        // };
+
+
+        //    const {food: healtyFood, error: noFruitsAvailable, addFood: addFruitFunc} = getFood('fruit');
+
+        //    console.log(noFruitsAvailable);
+        //    console.log(addFruitFunc('Grapes'));
+        //    console.log(healtyFood);
+
+        // *********************************************************************************************************   
+
+        // Spread operator
+
+        //The spread operator (...) allows an iterable item (e.g., an array)
+        // to be extracted into its parts and plugged into places that
+        // expect individual elements. With this syntax, you can split up object properties or array elements.
+
+        /* In the next use case below, we pull out elements of an array
+         and pass each element as individual function argument. */
+
+        //  const numbers = [11, 5, 3, 1, 26];
+        // Math.max expects to be called like Math.max(11,5,3,1,26)
+        // console.log(Math.max(...numbers)); // 26
+
+        // Another use case is to copy object properties and, thus, create a new object.
+
+        // const food = {
+        //     breakfast: ["🥞", "🧇"],
+        //     lunch: ["🍔", "🍟", "🍕"]
+        // };
+        // const foodAndDrinks = {
+        //     ...food,
+        //     drinks: ["🍷", "🍹", "🍺", "🥃"],
+        // };
+        // console.log(foodAndDrinks);
+        /*
+                {
+                  breakfast: ["🥞", "🧇"],
+                  lunch: ["🍔", "🍟", "🍕"],
+                  drinks: ["🍷", "🍹", "🍺", "🥃"],
+                } */
+
+        // Another use case is to copy object properties and, thus, create a new object.
+
+        //    const teams = {
+        //        australia: {
+        //            players: ['Warner', 'Watson', 'Hussey', 'Smith']
+        //        },
+        //        india: {
+        //            players: ['Dhawan', 'Rohit', 'Kohli', 'Rahul']
+        //        }
+        //    };
+
+        //   const teams2 = {
+        //       ...teams,
+        //       team:['Pakistan', 'Newzi'],
+        //   };
+
+        //   console.log(teams2.india);
+
+        // With this succinct(short) syntax, you can conveniently create a copy of an array.
+
+        const food = ["🥞", "🧇", "🍔", "🍟", "🍕"];
+        const copy = [...food];
+     //    const copy = food;
+        console.log(typeof copy); // ["🥞", "🧇", "🍔", "🍟", "🍕"]
+        console.log(typeof food);
+        console.log(food === copy); // false
+
+
+/* Recalling the last paragraph of our subsection on the switch statement, 
+the spread syntax is frequently used in the context of React state.
+With React, you should not manipulate state objects directly.
+Instead, you need to create a brand-new state object whenever you want to update the state.
+The following concept is considered good practice. */
+
+
+const family = {
+    members: 9,
+    membersName: ['Ali', 'Hassan', 'etc'],
+}
+
+const belongsTo = {
+    gaji: [...family.membersName],
+    Total: family.members,
+}
+
+console.log(belongsTo.gaji)
+console.log(belongsTo.Total);
 
 
 
