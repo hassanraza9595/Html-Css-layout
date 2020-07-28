@@ -439,101 +439,187 @@
         // }
         // renderProduct(product, { margin: "10px" }, { padding: "5px" });
 
-// ************************************************************************************************************
+        // ************************************************************************************************************
 
-                          // Classes
+        // Classes
 
-/*
+        /*
+        
+        A class represents a blueprint for new objects.
+        Variables and functions can be attached to a class and are called properties and methods, respectively.
+        In the context of a class, the this keyword refers to the current instance.
+        If you are coming from an object-oriented background,
+        you most likely have some incorrect assumptions about it; this article helps to demystify the this keyword.
+        
+        A class can have a constructor method, which represents a special kind of function
+        to initialize new objects of the blueprint.
+        You can instantiate the class with the new keyword.
+        With this, the constructor is invoked (or the default constructor,
+        if you do not provide any), and a new object is created.
+        
+          */
 
-A class represents a blueprint for new objects.
-Variables and functions can be attached to a class and are called properties and methods, respectively.
-In the context of a class, the this keyword refers to the current instance.
-If you are coming from an object-oriented background,
-you most likely have some incorrect assumptions about it; this article helps to demystify the this keyword.
+        //   class Leader {
+        //       // class body
+        //       constructor() {
+        //           // property
+        //           this.popular = "Zia Khan";
+        //           console.log('Constructor called once the object created');
+        //       }
 
-A class can have a constructor method, which represents a special kind of function
-to initialize new objects of the blueprint.
-You can instantiate the class with the new keyword.
-With this, the constructor is invoked (or the default constructor,
-if you do not provide any), and a new object is created.
+        //       whatsPopular() {
+        //           // method body
+        //           console.log(this.popular);
+        //       }
+        //   };
 
-  */
+        //   const teacher = new Leader(); 
+        //   teacher.whatsPopular();
 
-//   class Leader {
-//       // class body
-//       constructor() {
-//           // property
-//           this.popular = "Zia Khan";
-//           console.log('Constructor called once the object created');
-//       }
+        // ***************************************************************************************************
 
-//       whatsPopular() {
-//           // method body
-//           console.log(this.popular);
-//       }
-//   };
-
-//   const teacher = new Leader(); 
-//   teacher.whatsPopular();
-
-// ***************************************************************************************************
-
-//                      Array functions
-
-
-/* The map() function produces a new array with the same number of elements.
- However, for every entry of the original entry, an operation was applied to produce new entries.
- The following example creates a new array with duplicated fruits for every entry. */
-
-//  const numbers = [1,2,3,4,5];
-
-//  const copyNumbers = numbers.map(f=>`${f}${f}`);
-//  console.log(numbers);
-//  console.log(typeof copyNumbers[0]);
-
-// ****************************************************************************************************
-
-                                    // Callback functions
-
-// A function passed as an argument to another function is 
-// called a callback if the function invokes the argument at a later time.    
-
-// window.setTimeout(() => console.log("I'm a callback function"), 1000);
-
-function printGreet(msg, alertGreet) {
-    if(msg === 'Morning') {
-     morning(alertGreet);
-}
-else if (msg === 'Evening') {
-    evening(alertGreet);
-}
-else {
-    night(alertGreet);
-}
-};
-
-function morning() {
-    alert('Good Morning');
-    alertGreet('Dear');
-}
-
-function evening() {
-    alert('Good Evening');
-    alertGreet('Bye');
-}
-
-function night() {
-    alert('Good Night');
-    alertGreet('Take Care');
-}
-
-function alertGreet(msg) {
-    alert(msg);
-}
-
-printGreet('Evening', alertGreet);
+        //                      Array functions
 
 
+        /* The map() function produces a new array with the same number of elements.
+         However, for every entry of the original entry, an operation was applied to produce new entries.
+         The following example creates a new array with duplicated fruits for every entry. */
+
+        //  const numbers = [1,2,3,4,5];
+
+        //  const copyNumbers = numbers.map(f=>`${f}${f}`);
+        //  console.log(numbers);
+        //  console.log(typeof copyNumbers[0]);
+
+        // ****************************************************************************************************
+
+        // Callback functions
+
+        // A function passed as an argument to another function is 
+        // called a callback if the function invokes the argument at a later time.    
+
+        // window.setTimeout(() => console.log("I'm a callback function"), 1000);
+
+        // function printGreet(msg, alertGreet) {
+        //     if(msg === 'Morning') {
+        //      morning(alertGreet);
+        //      alertGreet('Dear');
+        // }
+        // else if (msg === 'Evening') {
+        //     evening(alertGreet);
+        // }
+        // else {
+        //     night(alertGreet);
+        // }
+        // };
+
+        // function morning() {
+        //     alert('Good Morning');
+        //     alertGreet('Have a Nice Day...!!!');
+        // }
+
+        // function evening() {
+        //     alert('Good Evening');
+        //     alertGreet('Bye');
+        // }
+
+        // function night() {
+        //     alert('Good Night');
+        //     alertGreet('Take Care');
+        // }
+
+
+
+        // function alertGreet(msg) {
+        //     alert(msg);
+        // }
+
+        // printGreet('Morning',alertGreet);
+
+        // const students = [
+        //     {name: 'Hassan', subject:'React'},
+        //     {name:'Junaid', subject:'React Native'}
+        // ]
+
+        // console.log('Statement 1');
+
+        // function enrollStudent(student, callback){
+        //     setTimeout(function() {
+        //         console.log('Start');
+        //         console.log(student.name)
+        //         callback(student);
+        //         console.log('Statement 2');
+        //         console.log('Statement 3');
+
+        //     }, 1000);
+
+        // }
+
+        // function getStudent(student){
+        //     setTimeout(function()
+        //     {
+        //      students.push(student);
+        //      console.log(students[2]);
+        //     }, 1000);
+
+        // }
+
+        // let newStudent = {name:'Asif', subject:'Javasrcipt'};
+        // enrollStudent(newStudent,getStudent);
+
+        // function test() {
+        //     console.log('Test Execute')
+        // }
+
+        // test();
+
+        // ****************************************************************************************************
+
+        //                                   Promises
+
+        //      function Waseem(single) {
+        //          return new Promise(function(resolve, reject) {
+        //                 if(single === 'job') {
+        //                     resolve();
+        //                 }
+        //                 else{
+        //                     reject();
+        //                 }
+        //          })
+        //      }
+        // let offer = prompt('Enter Value: ');
+        // Waseem(offer).then(function() {
+        //     console.log('Treat at Islamabad');
+        // }).catch(function(){
+        //     console.log('Nothing');
+        // });
+
+        // ****************************************************************************************************
+
+        //                                 Async/Await
+
+
+        async function apiFetch() {
+            console.log('Before fetching api');
+            const response = await fetch('https://api.github.com/users');
+            console.log('After Fetching api');
+            const users = await response.json();
+          //  console.log(users.length)
+            const user1 = users[0];
+          //  console.log(user1)
+            // const covid19 = await fetch('http://covid.gov.pk/');
+            // const covid19Data = await covid19.json();
+            // console.log(covid19);
+            return users;
+
+        }
+        const a = apiFetch();
+        console.log(a)
+       a.then(data => console.log(data));
+        console.log('Done');
+
+
+// *********************************************************************************************************
     </script>
 </body>
 
